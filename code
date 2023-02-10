@@ -1,0 +1,33 @@
+function mathCmd(numList,cmd){
+  if (cmd==1){
+    var min = 30;
+    for (var i = 0; i<numList.length;i++){
+      if (min>numList[i]){
+        min = numList[i];
+      }
+    }
+    return min;
+  } else if (cmd==2){
+    var max = 0;
+    for (var i = 0; i<numList.length; i++){
+      if (max<numList[i]){
+        max = numList[i];
+      }
+    }
+    return max;
+  } else if (cmd==3){
+    var total = 0;
+    for (var i = 0; i<numList.length;i++){
+      total += numList[i];
+    }
+    return total/numList.length;
+  } else if (cmd==4){
+    var even = [];
+    for (var i = 0; i<numList.length;i++){
+      if (numList[i]%2==0){
+        appendItem(even,numList[i]);
+      }
+    }
+    return even;
+  }
+}
